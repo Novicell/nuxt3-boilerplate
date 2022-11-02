@@ -1,0 +1,15 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "postcss", "vue"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "prettier.enable": false,
+  "terminal.integrated.cwd": "${workspaceFolder}/src"
+}

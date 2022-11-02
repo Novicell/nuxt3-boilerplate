@@ -1,0 +1,170 @@
+/**
+ * Settings: Variables
+ */
+
+:root {
+  /* Theme */
+
+  /* Primary colors */
+  --color-primary: #c80046;
+  --color-secondary: #363636;
+
+  /* Grayscale */
+  --color-white: #fff;
+  --color-gray-10: #f7f7f7;
+  --color-gray-20: #f2f2f2;
+  --color-gray-30: #e9e8e8;
+  --color-gray-40: #dedede;
+  --color-gray-50: #d2d1d1;
+  --color-gray-60: #787070;
+  --color-gray-70: #4f4c4d;
+  --color-gray-80: #453e3e;
+  --color-gray-90: #7b7979;
+  --color-black: var(--color-secondary);
+
+  /* Text */
+  --color-text: var(--color-secondary);
+
+  /* States */
+  --color-success: #65c179;
+  --color-success-dark: #5bae6d;
+  --color-success-darker: #519a61;
+  --color-warning: #ffba00;
+  --color-warning-dark: #e6a700;
+  --color-warning-darker: #cc9500;
+  --color-danger: #cb5757;
+  --color-danger-dark: #e46565;
+  --color-danger-darker: #f86f6f;
+
+  /* Grid */
+  --flexbox-grid-container-width: 1272px;
+  --flexbox-grid-container-spacing: 24px;
+  --flexbox-grid-half-gutter-width: 12px;
+  --flexbox-grid-half-gutter-width--mobile: 8px;
+
+  /* Typography
+  ********************/
+  --base-font-family: "Poppins", sans-serif;
+  --base-font-size: fluid(12px, 16px);
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --base-font-weight: 400;
+  --header-font-family: "Playfair Display", garamond, serif;
+
+  /* Input
+  ********************/
+  --input-color: var(--color-text);
+  --input-focus-border-color: var(--color-primary);
+  --input-placeholder-color: var(--color-gray-dusty);
+  --input-border-radius: 2px;
+
+  /* CSS Utils Overrides
+  ********************/
+
+  /* Spacing */
+  --css-utils-spacing-base: 8px;
+
+  /* Colors */
+  --css-utils-color-primary: var(--color-primary);
+  --css-utils-color-secondary: var(--color-secondary);
+  --css-utils-color-success: var(--color-success);
+  --css-utils-color-danger: var(--color-danger);
+  --css-utils-color-warning: var(--color-warning);
+  --css-utils-color-gray: var(--color-gray-30);
+  --css-utils-color-gray-light: var(--color-gray-10);
+  --css-utils-color-gray-dark: var(--color-gray-60);
+  --css-utils-color-body: var(--text-color);
+
+  /* Borders */
+  --css-utils-border-width: 1px;
+  --css-utils-border-color: var(--border-color);
+  --css-utils-border-radius-sm: 2px;
+  --css-utils-border-radius: 4px;
+  --css-utils-border-radius-lg: 5px;
+  --css-utils-border-radius-round: 100%;
+
+  /* Shadows */
+  --css-utils-box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.075);
+  --css-utils-box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
+  --css-utils-box-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.175);
+
+  /* Easing functions
+    ********************/
+  --easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+  /* http://easings.net/#easeInQuad */
+  --easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* http://easings.net/#easeOutQuad */
+  --easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  /* http://easings.net/#easeInOutQuad */
+
+  --easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+
+  /* http://easings.net/#easeInSine */
+  --easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  /* http://easings.net/#easeOutSine */
+  --easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  /* http://easings.net/#easeInOutSine */
+
+  --easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  /* http://easings.net/#easeInCubic */
+  --easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  /* http://easings.net/#easeOutCubic */
+  --easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* http://easings.net/#easeInOutCubic */
+
+  --easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  /* http://easings.net/#easeInQuart */
+  --easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  /* http://easings.net/#easeOutQuart */
+  --easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* http://easings.net/#easeInOutQuart */
+
+  --easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+  /* http://easings.net/#easeInQuint */
+  --easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+
+  /* http://easings.net/#easeOutQuint */
+  --easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+
+  /* http://easings.net/#easeInOutQuint */
+
+  --easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+
+  /* http://easings.net/#easeInExpo */
+  --easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+
+  /* http://easings.net/#easeOutExpo */
+  --easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+  /* http://easings.net/#easeInOutExpo */
+
+  --easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+  /* http://easings.net/#easeInCirc */
+  --easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  /* http://easings.net/#easeOutCirc */
+  --easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  /* http://easings.net/#easeInOutCirc */
+
+  --easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+  /* http://easings.net/#easeInBack */
+  --easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* http://easings.net/#easeOutBack */
+  --easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

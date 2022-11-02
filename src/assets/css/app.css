@@ -1,0 +1,35 @@
+@import "_resets.css";
+@import "_mediaqueries.css";
+@import "_variables.css";
+@import "_typography.css";
+@import "_fonts.css";
+@import "_transitions.css";
+@import "@novicell/flexbox-grid/dist/src/grid.css";
+@import "@novicell/css-utils/dist/src/all.css";
+@import "_helpers.css";
+
+html { min-height: 100%; }
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  font-weight: var(--base-font-weight);
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  line-height: 1.5;
+  background-color: var(--color-gray-10);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Makes sure that touch devices inherit 16px font size to avoid IOS zoom */
+@media only screen and (hover: none) and (pointer: coarse) {
+  input,
+  select,
+  textarea { font-size: 16px !important; }
+}

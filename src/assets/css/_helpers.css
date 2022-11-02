@@ -1,0 +1,25 @@
+.text-sans-serif { font-family: var(--base-font-family); }
+
+.text-small { font-size: var(--font-size-small); }
+
+.text-medium { font-size: var(--font-size-medium); }
+
+.reset-button {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  &[disabled] {
+    color: var(--color-gray-60);
+    cursor: not-allowed;
+  }
+}

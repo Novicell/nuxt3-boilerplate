@@ -1,0 +1,17 @@
+{
+  "extends": "@novicell/stylelint-config",
+  "rules": {
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [ "fluid" ]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["deep"]
+      }
+    ]
+  }
+}

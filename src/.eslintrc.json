@@ -1,0 +1,6 @@
+{
+  "extends": "@novicell/eslint-config-nuxt",
+  "rules": {
+    "vue/no-multiple-template-root": "off"
+  }
+}
