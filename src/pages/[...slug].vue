@@ -24,14 +24,13 @@ if (error.value) {
 
 // Handle Redirect
 if (data.value.metadata.statusCode > 300 && data.value.metadata.statusCode < 400) {
-  navigateTo('/', { redirectCode: 302 });
+  navigateTo(data.value.metadata.redirectUrl || '/', { redirectCode: 302 });
 }
 
 // Handle 404
 if (!data.value?.metadata || data.value.metadata.statusCode === 404) {
   throwError({
-    statusCode: 404,
-    data: JSON.stringify(data.value)
+    statusCode: 404
   });
 }
 

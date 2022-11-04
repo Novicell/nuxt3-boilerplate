@@ -32,8 +32,6 @@ PermitRootLogin 	yes\n\
 # Install PM 2
 RUN npm config set unsafe-perm true
 RUN npm install pm2 -g
-ENV PM2_PUBLIC_KEY r9i87khv2kpm6n1
-ENV PM2_SECRET_KEY unghs34qqxuatym
 
 # Create app directory
 WORKDIR /usr/src/app/

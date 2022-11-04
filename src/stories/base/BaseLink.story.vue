@@ -11,7 +11,7 @@ function initState () {
     <Variant title="Link" :init-state="initState">
       <template #default="{ state }">
         <BaseLink
-          :url="state.url"
+          :to="state.url"
         >
           {{ state.title }}
         </BaseLink>

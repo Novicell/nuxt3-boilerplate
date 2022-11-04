@@ -1,4 +1,7 @@
 <script setup>
+import { useRoot } from '~~/stores/root';
+const root = useRoot();
+
 definePageMeta({
   key: route => route.slug
 });

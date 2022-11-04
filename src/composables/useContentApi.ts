@@ -1,4 +1,4 @@
-import { ContentResponse } from "~~/types";
+import { ContentResponse } from '~~/types';
 
 export default function () {
   const getContent = (path: string) => {
