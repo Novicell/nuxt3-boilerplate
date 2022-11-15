@@ -1,3 +1,4 @@
+import { useRoot } from '~~/stores/root';
 import { ContentResponse } from '~~/types';
 
 export default function () {
@@ -6,7 +7,11 @@ export default function () {
       params: {
         path
       },
-      keepalive: true
+      keepalive: true,
+      // eslint-disable-next-line require-await
+      async onResponse () {
+        useRoot().setValue('API value');
+      }
     });
   };
 
