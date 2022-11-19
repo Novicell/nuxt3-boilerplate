@@ -24,7 +24,7 @@ const iconColor = ref('');
       <Buttons />
     </Variant>
     <Variant title="Icons" icon="carbon:edit">
-      <Icons :style="{color: iconColor}" />
+      <!-- <Icons :style="{color: iconColor}" /> -->
       <template #controls>
         <label class="htw-p-2 hover:htw-bg-primary-100 dark:hover:htw-bg-primary-800 htw-flex htw-gap-2 htw-flex-wrap htw-cursor-text htw-items-center">
           <span class="htw-w-28 htw-whitespace-nowrap htw-text-ellipsis htw-overflow-hidden htw-shrink-0">Icon color</span>

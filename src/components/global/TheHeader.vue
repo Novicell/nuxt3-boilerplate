@@ -2,7 +2,7 @@
 import { storeToRefs } from 'pinia';
 import { useRoot } from '~~/stores/root';
 
-const { myReactiveValue } = storeToRefs(useRoot());
+const { navigation } = storeToRefs(useRoot());
 </script>
 
 <template>
@@ -14,11 +14,7 @@ const { myReactiveValue } = storeToRefs(useRoot());
       </div>
 
       <div class="navigation">
-        {{ myReactiveValue }}
-        <BaseLink class="navigation__item" to="/">Frontpage</BaseLink>
-        <BaseLink class="navigation__item" to="/no-page">404</BaseLink>
-        <BaseLink class="navigation__item" to="/default">Default page</BaseLink>
-        <BaseLink class="navigation__item" to="/default2">Default page2</BaseLink>
+        <BaseLink class="navigation__item" :to="item.url" v-for="item in navigation">{{ item.name }}</BaseLink>
       </div>
     </div>
   </header>

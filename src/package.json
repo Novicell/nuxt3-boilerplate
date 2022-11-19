@@ -23,7 +23,7 @@
   "devDependencies": {
     "@modyfi/vite-plugin-yaml": "^1.0.3",
     "@novicell/eslint-config-nuxt": "^0.2.5",
-    "@novicell/postcss-config": "^0.3.1",
+    "@novicell/postcss-config": "^0.4.2",
     "@novicell/stylelint-config": "^0.2.10",
     "@vueuse/core": "^9.4.0",
     "@vueuse/nuxt": "^9.4.0",
@@ -33,7 +33,7 @@
     "stylelint": "^14.10.0"
   },
   "dependencies": {
-    "@histoire/plugin-nuxt": "^0.11.6",
+    "@histoire/plugin-nuxt": "^0.11.7",
     "@novicell/css-utils": "^4.0.0",
     "@novicell/flexbox-grid": "^2.0.0",
     "@nuxt/image-edge": "^1.0.0-27809804.194d2d6",

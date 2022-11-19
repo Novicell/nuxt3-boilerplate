@@ -10,7 +10,7 @@ export default function () {
     });
   };
   const getNavigation = () => {
-    return UseBaseApi<string[]>('/api/navigation', {
+    return UseBaseApi<any[]>('/api/navigation', {
       keepalive: true,
     });
   };

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { NuxtIcons } from '~~/.nuxt/nuxticons.mjs';
+// import { NuxtIcons } from '~~/.nuxt/nuxticons.mjs';
 
-const iconsList = Object.keys(NuxtIcons);
+const iconsList: any = []; // Object.keys(NuxtIcons);
 
 const toFirstUpper = (name: string) => {
   return name.charAt(0).toUpperCase() + name.slice(1);

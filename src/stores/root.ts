@@ -1,23 +1,23 @@
 import { acceptHMRUpdate, defineStore } from 'pinia';
 
 export const useRoot = defineStore('root', () => {
-  const myReactiveValue = ref<string[]>([]);
+  const navigation = ref<any[]>([]);
   const myComputedValue = computed(() => {
-    return myReactiveValue.value.length + Math.random();
+    return navigation.value.length + Math.random();
   });
 
   async function init () {
     try {
       const { getNavigation } = useContentApi();
-      const navigation = await getNavigation();
-      myReactiveValue.value = navigation;
+      const data = await getNavigation();
+      navigation.value = data;
     } catch (error) {
       console.error(error);
     }
   }
 
   return {
-    myReactiveValue,
+    navigation,
     myComputedValue,
     init
   };
