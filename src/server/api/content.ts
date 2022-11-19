@@ -1,7 +1,7 @@
 import { ContentResponse } from '~~/types';
 
-export default defineEventHandler((event) => {
-  const { path } = useQuery(event);
+export default defineEventHandler(async (event) => {
+  const { path } = getQuery(event);
   const mockData: ContentResponse[] = [
     {
       alias: 'frontpage',
@@ -40,6 +40,8 @@ export default defineEventHandler((event) => {
       }
     }
   ];
+
+  await new Promise(res => setTimeout(() => res(true), 500));
 
   return mockData.find(x => x.metadata.path === path) || {
     alias: null,

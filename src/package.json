@@ -28,7 +28,7 @@
     "@vueuse/core": "^9.4.0",
     "@vueuse/nuxt": "^9.4.0",
     "eslint": "^8.22.0",
-    "nuxt": "3.0.0-rc.12",
+    "nuxt": "3.0.0",
     "postcss-fluid": "^1.4.2",
     "stylelint": "^14.10.0"
   },
@@ -36,8 +36,8 @@
     "@histoire/plugin-nuxt": "^0.11.6",
     "@novicell/css-utils": "^4.0.0",
     "@novicell/flexbox-grid": "^2.0.0",
-    "@nuxt/image-edge": "^1.0.0-27769790.4b27db3",
-    "@pinia/nuxt": "^0.4.3",
-    "nuxt-icons": "^2.0.2"
+    "@nuxt/image-edge": "^1.0.0-27809804.194d2d6",
+    "@pinia/nuxt": "^0.4.4",
+    "nuxt-icons": "^3.0.0"
   }
 }
