@@ -38,10 +38,28 @@ export default defineEventHandler(async (event) => {
         redirectUrl: null,
         path: '/default'
       }
+    },
+    {
+      alias: 'pagedefault',
+      content: {
+        blocks: [
+          {
+            alias: 'rte',
+            content: {
+              text: '<h1 style="text-align: center;">This is a default 2 text page.</h1>'
+            }
+          }
+        ]
+      },
+      metadata: {
+        statusCode: 200,
+        redirectUrl: null,
+        path: '/default2'
+      }
     }
   ];
 
-  await new Promise(res => setTimeout(() => res(true), 500));
+  await new Promise(res => setTimeout(() => res(true), 300));
 
   return mockData.find(x => x.metadata.path === path) || {
     alias: null,

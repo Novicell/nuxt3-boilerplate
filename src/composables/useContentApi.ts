@@ -6,11 +6,17 @@ export default function () {
       params: {
         path
       },
-      keepalive: true
+      keepalive: true,
+    });
+  };
+  const getNavigation = () => {
+    return UseBaseApi<string[]>('/api/navigation', {
+      keepalive: true,
     });
   };
 
   return {
-    getContent
+    getContent,
+    getNavigation
   };
 };

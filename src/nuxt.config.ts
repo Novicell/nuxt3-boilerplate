@@ -15,8 +15,11 @@ export default defineNuxtConfig({
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ]
   },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   modules: [
-    // '@pinia/nuxt',
+    '@pinia/nuxt',
     'nuxt-icons',
     '@vueuse/nuxt',
     '@nuxt/image-edge'

@@ -6,18 +6,16 @@ const PageDefault = resolveComponent('LazyPageDefault');
 // Fetch data from API
 const { fullPath } = useRoute();
 const { getContent } = useContentApi();
-const encodedPath = encodeURIComponent(fullPath);
+const encodedPath = fullPath;
 const { data, error } = await useAsyncData(
   encodedPath,
-  () => getContent(fullPath),
-  {
-    initialCache: false
-  }
+  () => getContent(fullPath)
 );
+
 
 // Handle API error
 if (error.value) {
-  throwError({
+  showError({
     statusCode: 500
   });
 }
@@ -29,10 +27,11 @@ if (data.value.metadata.statusCode > 300 && data.value.metadata.statusCode < 400
 
 // Handle 404
 if (!data.value?.metadata || data.value.metadata.statusCode === 404) {
-  throwError({
+  showError({
     statusCode: 404
   });
 }
+
 
 const viewTemplate = computed(() => {
   let view = null;
@@ -57,6 +56,6 @@ const viewTemplate = computed(() => {
 </script>
 <template>
   <div>
-    <Component :is="viewTemplate" v-if="viewTemplate" :key="$route.path" :content="data?.content" />
+    <Component :is="viewTemplate" v-if="viewTemplate" :content="data?.content" />
   </div>
 </template>

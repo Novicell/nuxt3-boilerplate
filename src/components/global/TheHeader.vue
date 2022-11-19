@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { useRoot } from '~~/stores/root';
 
+const { myReactiveValue } = storeToRefs(useRoot());
 </script>
 
 <template>
@@ -11,8 +14,11 @@
       </div>
 
       <div class="navigation">
+        {{ myReactiveValue }}
         <BaseLink class="navigation__item" to="/">Frontpage</BaseLink>
+        <BaseLink class="navigation__item" to="/no-page">404</BaseLink>
         <BaseLink class="navigation__item" to="/default">Default page</BaseLink>
+        <BaseLink class="navigation__item" to="/default2">Default page2</BaseLink>
       </div>
     </div>
   </header>

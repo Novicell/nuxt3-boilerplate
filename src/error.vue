@@ -12,15 +12,14 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <NuxtLayout>
-      <div class="container">
-        <div class="d-flex align-items-center flex-column">
-          <h1 class="mb-0">{{ error?.statusCode }}</h1>
-          <p class="mb-4">{{ $t('ErrorMessages.Generic') }}</p>
-          <BaseButton @click="handleError">{{ $t('ErrorMessages.GoToFrontpage') }}</BaseButton>
-        </div>
-      </div>
-    </NuxtLayout>
+  <NuxtLoadingIndicator color="#c80046" />
+  <NuxtLayout>
+    <div class="container">
+    <div class="d-flex align-items-center flex-column">
+      <h1 class="mb-0">{{ error?.statusCode }}</h1>
+      <p class="mb-4">{{ $t('ErrorMessages.Generic') }}</p>
+      <BaseButton @click="handleError">{{ $t('ErrorMessages.GoToFrontpage') }}</BaseButton>
+    </div>
   </div>
+  </NuxtLayout>
 </template>
