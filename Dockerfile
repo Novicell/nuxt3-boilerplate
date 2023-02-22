@@ -9,8 +9,8 @@ RUN apk add --no-cache --update \
 
 # Install and configure SSH
 EXPOSE 2222
-ENV WEBSITE_SSH_USER "root"
-ENV WEBSITE_SSH_PASSWORD "Docker!"
+ENV WEBSITE_SSH_USER ""
+ENV WEBSITE_SSH_PASSWORD ""
 RUN apk --update add --no-cache openssh bash \
   && ssh-keygen -A \
   && echo "$WEBSITE_SSH_USER:$WEBSITE_SSH_PASSWORD" | chpasswd \
