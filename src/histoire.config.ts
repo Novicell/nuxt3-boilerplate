@@ -16,31 +16,31 @@ export default defineConfig({
   },
   theme: {
     logoHref: '/',
-    favicon: './favicon.ico',
+    // favicon: './favicon.ico',
     colors: {
       gray: defaultColors.stone,
       primary: defaultColors.gray
     }
-  },
-  tree: {
-    file: ({ title, path }) => {
-      if (path.includes('tokens')) {
-        return title.split('/');
-      } else {
-        const fileName = path.substring(path.lastIndexOf('/') + 1);
-        return path.replace('stories/', '').replace(fileName, title).split('/');
-      }
-    },
-    groups: [
-      {
-        id: 'top',
-        title: '',
-        include: file => file.path.includes('DesignSystem')
-      },
-      {
-        title: 'Components',
-        include: file => !file.path.includes('DesignSystem')
-      }
-    ]
   }
+  // tree: {
+  // file: ({ title, path }) => {
+  //   if (path.includes('tokens')) {
+  //     return title.split('/');
+  //   } else {
+  //     const fileName = path.substring(path.lastIndexOf('/') + 1);
+  //     return path.replace('stories/', '').replace(fileName, title).split('/');
+  //   }
+  // },
+  //   groups: [
+  //     {
+  //       id: 'top',
+  //       title: '',
+  //       include: file => file.path.includes('DesignSystem')
+  //     },
+  //     {
+  //       title: 'Components',
+  //       include: file => !file.path.includes('DesignSystem')
+  //     }
+  //   ]
+  // }
 });

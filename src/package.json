@@ -21,23 +21,25 @@
     "story:preview": "histoire preview"
   },
   "devDependencies": {
-    "@modyfi/vite-plugin-yaml": "^1.0.3",
+    "@modyfi/vite-plugin-yaml": "^1.0.4",
     "@novicell/eslint-config-nuxt": "^0.2.5",
     "@novicell/postcss-config": "^0.3.1",
     "@novicell/stylelint-config": "^0.2.10",
-    "@vueuse/core": "^9.4.0",
-    "@vueuse/nuxt": "^9.4.0",
-    "eslint": "^8.22.0",
-    "nuxt": "3.0.0-rc.12",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/nuxt": "^9.13.0",
+    "eslint": "^8.34.0",
+    "nuxt": "^3.2.2",
     "postcss-fluid": "^1.4.2",
-    "stylelint": "^14.10.0"
+    "stylelint": "^15.2.0"
   },
   "dependencies": {
-    "@histoire/plugin-nuxt": "^0.11.6",
+    "@histoire/plugin-nuxt": "^0.15.8",
     "@novicell/css-utils": "^4.0.0",
     "@novicell/flexbox-grid": "^2.0.0",
-    "@nuxt/image-edge": "^1.0.0-27769790.4b27db3",
-    "@pinia/nuxt": "^0.4.3",
-    "nuxt-icons": "^2.0.2"
+    "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
+    "@pinia/nuxt": "^0.4.7",
+    "nuxt-icons": "^3.1.0",
+    "pinia": "^2.0.32",
+    "ufo": "^1.1.0"
   }
 }

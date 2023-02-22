@@ -9,28 +9,34 @@ const { getContent } = useContentApi();
 const encodedPath = encodeURIComponent(fullPath);
 const { data, error } = await useAsyncData(
   encodedPath,
-  () => getContent(fullPath),
-  {
-    initialCache: false
-  }
+  () => getContent(fullPath)
 );
 
 // Handle API error
-if (error.value) {
-  throwError({
-    statusCode: 500
+// Handle API error
+if (!data.value?.metadata?.statusCode || error.value) {
+  throw createError({
+    statusCode: 500,
+    fatal: true,
+    data: {
+      error: error.value,
+      fullPath,
+      meta: data.value?.metadata
+    }
   });
 }
 
 // Handle Redirect
 if (data.value.metadata.statusCode > 300 && data.value.metadata.statusCode < 400) {
-  navigateTo(data.value.metadata.redirectUrl || '/', { redirectCode: 302 });
+  const redirect = data.value.metadata?.redirectUrl || '/';
+  navigateTo(redirect, { redirectCode: 302 });
 }
 
 // Handle 404
 if (!data.value?.metadata || data.value.metadata.statusCode === 404) {
-  throwError({
-    statusCode: 404
+  throw showError({
+    statusCode: 404,
+    fatal: false
   });
 }
 

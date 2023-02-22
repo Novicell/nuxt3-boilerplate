@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<!-- <script lang="ts" setup>
 import { NuxtIcons } from '~~/.nuxt/nuxticons.mjs';
 
 const iconsList = Object.keys(NuxtIcons);
@@ -47,4 +47,4 @@ const toFirstUpper = (name: string) => {
     transform: translate(-50%, -50%);
   }
 }
-</style>
+</style> -->

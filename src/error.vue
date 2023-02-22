@@ -7,7 +7,7 @@ const handleError = () => clearError({ redirect: '/' });
 
 // Set SEO tags
 useHead({
-  title: props.error?.statusCode
+  title: props.error?.statusCode + 'Error'
 });
 </script>
 

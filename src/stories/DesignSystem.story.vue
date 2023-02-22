@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import Colors from './design-system/Colors.vue';
-import Typography from './design-system/Typography.vue';
-import Icons from './design-system/Icons.vue';
-import Buttons from './design-system/Buttons.vue';
-const iconColor = ref('');
+// import Colors from './design-system/Colors.vue';
+// import Typography from './design-system/Typography.vue';
+// import Buttons from './design-system/Buttons.vue';
 </script>
 <template>
   <Story
@@ -14,7 +12,7 @@ const iconColor = ref('');
     :responsive-disabled="true"
     :layout="{ type: 'single', iframe: true }"
   >
-    <Variant title="Colors" icon="carbon:color-palette">
+    <!-- <Variant title="Colors" icon="carbon:color-palette">
       <Colors />
     </Variant>
     <Variant title="Typography" icon="carbon:text-font">
@@ -22,8 +20,8 @@ const iconColor = ref('');
     </Variant>
     <Variant title="Buttons" icon="carbon:button-centered">
       <Buttons />
-    </Variant>
-    <Variant title="Icons" icon="carbon:edit">
+    </Variant> -->
+    <!-- <Variant title="Icons" icon="carbon:edit">
       <Icons :style="{color: iconColor}" />
       <template #controls>
         <label class="htw-p-2 hover:htw-bg-primary-100 dark:hover:htw-bg-primary-800 htw-flex htw-gap-2 htw-flex-wrap htw-cursor-text htw-items-center">
@@ -33,7 +31,7 @@ const iconColor = ref('');
           </span>
         </label>
       </template>
-    </Variant>
+    </Variant> -->
   </Story>
 </template>
 

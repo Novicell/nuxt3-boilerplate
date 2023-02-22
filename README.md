@@ -1,6 +1,6 @@
 # Nuxt 3 Boilerplate
 
-![Nuxt version](https://img.shields.io/badge/Nuxt%20version-3.0.0.rc.12-3643B3)
+![Nuxt version](https://img.shields.io/badge/Nuxt%20version-3.2.2-3643B3)
 ![Node version](https://img.shields.io/badge/Node%20version-16.12.0-026E00)
 
 Demo: https://novicell-nuxt3-boilerplate.netlify.app

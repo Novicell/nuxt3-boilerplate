@@ -1,7 +1,7 @@
 import { ContentResponse } from '~~/types';
 
 export default defineEventHandler((event) => {
-  const { path } = useQuery(event);
+  const { path } = getQuery(event);
   const mockData: ContentResponse[] = [
     {
       alias: 'frontpage',
